@@ -1,0 +1,182 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Fractals</title>
+</head>
+<body>
+
+    <header align="center">
+        <br>
+        <h2>
+            <svg width="50" height="50">
+                <circle cx="25" cy="25" r="20" stroke="#343434" stroke-width="2" fill="#fefefe" />
+            </svg><br>
+            Rareș Bozga's
+        </h2>
+        <h1>Cool Fractals</h1>
+
+        <hr /><br>
+                    
+        <nav>
+            <div align="center">
+                <a href="/">Home</a> ┃
+                <a href="https://www.github.com/fishydarwin">GitHub</a>
+            </div>
+        </nav>
+        
+    </header>
+
+    <br><hr />
+    
+    <main>
+        <br>
+
+        <!-- Fractal Images -->
+        <article>
+
+            <table width="100%" border="0" align="center">
+                <tr />
+                    <td width="20%"></td>
+                    <td width="60%">
+                        <h2>A collection of beautiful fractals</h2>
+
+                        <p>
+                            This is a collection of fractal images I have taken using FractalExplorer, a custom-made program in Java (using Swing) that uses its own programming language to render fractals.
+
+                            <br><br>
+                            <b>Are you curious? See this link:</b><br>
+                            <a href="https://www.github.com/fishydarwin/FractalExplorer" target="_blank">FractalExplorer GitHub</a>
+                            <p>(currently has builds for macOS and Windows)</p>
+
+                            <p>Why this?</p>
+                            <ul>
+                                <li>It's cool</li>
+                                <li>I like it</li>
+                            </ul>
+
+                            <div align="center">
+                                <p>(Not my video) A cool Mandelbrot zoom.</p>
+                                <video src="mandel.mp4" controls></video>
+                            </div>
+
+                            <div align="center">
+                                <p>(Some music for the vibe)</p>
+                                <audio src="space_song.mp3" controls></audio>
+                            </div>
+                        </p>
+                    </td>
+                    <td width="20%"></td>
+                <tr />
+            </table>
+
+            <br>
+            <section>
+                <div align="center">
+                    <h3><b>➳</b> Classic Stuff</h3>
+                    <p>
+                        No code is provided for these examples since they are ubiquitous.
+                    </p>
+                    <p>
+                        <figure>
+                            <img src="mandelbrot.png" width="600" /><br>
+                            <figcaption>
+                                <p><b>Mandelbrot Set</b> - a classic fractal</p>
+                            </figcaption>
+                        </figure>
+                    </p>
+                    <br>
+                    <p>
+                        <figure>
+                            <img src="ship.png" width="600" /><br>
+                            <figcaption>
+                                <p><b>Burning Ship</b> - <i>"Our ship is going down!"</i></p>
+                            </figcaption>
+                        </figure>
+                    </p>
+                </div>
+            </section>
+
+            <br><hr />
+
+            <br>
+            <section>
+                <div align="center">
+                    <h3><b>➳</b> <i>Exotic</i> Stuff</h3>
+                    <aside>
+                        This might not be necessarily interesting to some, but I thought it would be nice to include.
+                    </aside>
+
+                    <p>
+                        The correct <code>.fexl</code> script is attached for each here.
+                    </p>
+                    <p>
+                        <figure>
+                            <img src="sin_cos.png" width="600" /><br>
+                            <p><b>Sine Cosine Craziness</b></p>
+                            <br>
+                            <table width="100%" border="0" align="center">
+                                <tr />
+                                    <td width="40%"></td>
+                                    <td width="20%">
+                                        <code>
+                                            a = RE[z];<br>
+                                            b = IM[z];<br>
+                                            <br>
+                                            sin_a = SIN[a];<br>
+                                            cos_b = COS[b];<br>
+                                            <br>
+                                            z = complex: sin_a, cos_b;<br>
+                                            z = z * z;<br>
+                                            z = z + c;<br>
+                                            <br>
+                                            bound = pi;
+                                        </code>
+                                    </td>
+                                    <td width="40%"></td>
+                                </tr>
+                            </table>
+                        </figure>
+                    </p>
+                    <br>
+                    <p>
+                        <figure>
+                            <img src="tan.png" width="600" /><br>
+                            <p><b>Simple Tangent</b> (Alice in Mandel-land)</p>
+                            <br>
+                            <table width="100%" border="0" align="center">
+                                <tr />
+                                    <td width="40%"></td>
+                                    <td width="20%">
+                                        <code>
+                                            z = TAN[z];<br>
+                                            z = z * z;<br>
+                                            z = z + c;<br>
+                                            bound = pi;
+                                        </code>
+                                    </td>
+                                    <td width="40%"></td>
+                                </tr>
+                            </table>
+                        </figure>
+                    </p>
+                </div>
+            </section>
+
+        </article>
+
+        <br><hr />
+
+    </main>
+
+    <footer>
+        <div align="center">
+            <p>
+                Do you have some cool fractal scripts in <code>.fexl</code>? <br>
+                Hit me up! <b>bozgararesionut@gmail.com</b>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
