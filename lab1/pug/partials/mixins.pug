@@ -1,0 +1,6 @@
+mixin nav(header, links)
+    h1= header
+    nav
+        ul
+            each link in links
+                li: a(href=link.href)= link.title
