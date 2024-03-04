@@ -20,6 +20,12 @@ html
             li: +strongitem(feature.title, feature.description)
       +section("Popular Skins")
         +table(["name", "rarity", "release", "image"], skins)
+      +section("Join the Community")
+        p= "Fortnite has a thriving community of millions of players around the world. Connect with other players, share your creations, and discuss the latest updates."
+        div.social-links
+          include ../../public/twitter.svg
+          include ../../public/discord.svg
+          include ../../public/twitch.svg
       hr
       +section("Latest news")
         each a in articles
