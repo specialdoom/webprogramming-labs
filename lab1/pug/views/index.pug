@@ -6,3 +6,23 @@ html
   body
     header
       +nav(title, links)
+    main
+      +section("Game modes")
+        each mode in modes
+          div.mode
+            h3= mode.title
+            p= mode.description
+            a(href=mode.href).learn-more= "Learn more"
+      +aside("Fornite Tips & Tricks", tips)
+      +section("Features", features)
+        each feature in features
+          ul
+            li: +strongitem(feature.title, feature.description)
+      +section("Popular Skins")
+        +table(["name", "rarity", "release", "image"], skins)
+      hr
+      +section("Latest news")
+        each a in articles
+          +article(a.title, a.description, a.link)
+      footer
+        p= "2024 Epic Games. All rights reserved."

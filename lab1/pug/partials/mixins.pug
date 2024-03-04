@@ -4,3 +4,45 @@ mixin nav(header, links)
         ul
             each link in links
                 li: a(href=link.href)= link.title
+
+mixin section(header)
+    section
+        h2= header
+        if block
+            block
+
+
+mixin strongitem(title, description)
+    strong= title + ' '
+    span= description
+
+mixin aside(header, items)
+    aside
+        h3= header
+        ul
+            each item in items
+                li: +strongitem(item.title, item.description)
+
+mixin table(headers, data)
+    +section("Popular skins")
+        table
+            tr
+                each header in headers
+                    th= header
+            each item in data
+                tr
+                    each val, key in item
+                        if key === "image"
+                            td  
+                                figure
+                                    img(src= val)
+                                    figcaption= item.name
+                        else
+                            td= val
+
+mixin article(title, description, link)
+    article
+        h3= title
+        p= description
+        if link
+            a(href=link.href)= link.label
