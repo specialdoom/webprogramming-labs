@@ -1,3 +1,4 @@
+// Generate a `nav` elements with the `header` provided and an `ul` containing all the links provided
 mixin nav(header, links)
     h1= header
     nav
@@ -5,17 +6,19 @@ mixin nav(header, links)
             each link in links
                 li: a(href=link.href)= link.title
 
+// Generate a `section` with the `header` provided and an optional `block`
 mixin section(header)
     section
         h2= header
         if block
             block
 
-
+// Generate an `item` with the `title` encapsulated in `strong` and `description`
 mixin strongitem(title, description)
     strong= title + ' '
     span= description
 
+// Generate an `aside` with the `header` provided and an `ul` containing all the `items`
 mixin aside(header, items)
     aside
         h3= header
@@ -23,6 +26,7 @@ mixin aside(header, items)
             each item in items
                 li: +strongitem(item.title, item.description)
 
+// Generate a `table` with the `headers` and `data`
 mixin table(headers, data)
     +section("Popular skins")
         table
@@ -40,6 +44,7 @@ mixin table(headers, data)
                         else
                             td= val
 
+// Generate an `article` with the `title`, `description`, and `link`
 mixin article(title, description, link)
     article
         h3= title
