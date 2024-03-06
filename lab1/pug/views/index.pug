@@ -1,0 +1,34 @@
+include ../partials/mixins
+
+html
+  head
+    title= title
+  body
+    header
+      +nav(title, links)
+    main
+      +section("Game modes")
+        each mode in modes
+          div.mode
+            h3= mode.title
+            p= mode.description
+            a(href=mode.href).learn-more= "Learn more"
+      +aside("Fornite Tips & Tricks", tips)
+      +section("Features", features)
+        each feature in features
+          ul
+            li: +strongitem(feature.title, feature.description)
+      +section("Popular Skins")
+        +table(["name", "rarity", "release", "image"], skins)
+      +section("Join the Community")
+        p= "Fortnite has a thriving community of millions of players around the world. Connect with other players, share your creations, and discuss the latest updates."
+        div.social-links
+          include ../../public/twitter.svg
+          include ../../public/discord.svg
+          include ../../public/twitch.svg
+      hr
+      +section("Latest news")
+        each a in articles
+          +article(a.title, a.description, a.link)
+      footer
+        p= "2024 Epic Games. All rights reserved."
